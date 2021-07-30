@@ -1,0 +1,35 @@
+{
+  "name": "boursorama-to-jepilote",
+  "version": "1.0.0",
+  "description": "A simple but effective CLI tool which takes a Boursorama CSV file and converts it to a JePilote date format",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node src/cli.ts",
+    "build": "tsc"
+  },
+  "bin": {
+    "btj": "dist/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julienfdev/boursorama-to-jepilote.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/julienfdev/boursorama-to-jepilote/issues"
+  },
+  "homepage": "https://github.com/julienfdev/boursorama-to-jepilote#readme",
+  "devDependencies": {
+    "@types/node": "^16.4.7",
+    "@types/papaparse": "^5.2.6",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "iconv-lite": "^0.6.3",
+    "papaparse": "^5.3.1"
+  }
+}
