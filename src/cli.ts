@@ -21,12 +21,12 @@ else {
     main();
 }
 
-async function main() {
+async function main(): Promise<void> {
     // Checking if file path is relative, absolute, or starts with user alias (linux and MacOS), and return the absolute file path to open
     const filepath = args[2];
     const absoluteFilepath = getAbsoluteFilePath(filepath);
     // If there is a third argument, it's the output file so we get its absolute path or we just insert -jepilote into the input filename
-    const outputPath = args.length == 4 ? args[3] : absoluteFilepath.replace(".csv", "-jepilote.csv");
+    const outputPath = args.length == 4 ? getAbsoluteFilePath(args[3]) : absoluteFilepath.replace(".csv", "-jepilote.csv");
     try {
         // We try to open the file as binary
         console.log(chalk.bold("Opening file: ") + filepath);
@@ -44,7 +44,7 @@ async function main() {
     process.exit(0);
 }
 
-function getAbsoluteFilePath(filepath: string) {
+function getAbsoluteFilePath(filepath: string): string {
     // this is OS dependent :
     const isPathAbsolute = process.platform == "win32" ? filepath[1] == ":" : filepath.startsWith('/');
     if (isPathAbsolute) {

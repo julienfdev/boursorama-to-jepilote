@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+## 1.1.2 - 2021-07-30
+### Fixed
+- CLI Tool now exports the output file to the correct directory
+
 ## 1.1.1 - 2021-07-30
 ### Added
 - TypeScript type declarations
