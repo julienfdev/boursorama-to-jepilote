@@ -1,6 +1,6 @@
 {
   "name": "boursorama-to-jepilote",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A simple but effective CLI tool which takes a Boursorama CSV file and converts it to a JePilote date format",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
